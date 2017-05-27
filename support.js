@@ -172,6 +172,10 @@ chain = curry(function(f, m){
   return m.map(f).join(); // or compose(join, map(f))(m)
 });
 
+split = curry(function(what, x) {
+  return x.split(what);
+});
+
 liftA2 = curry(function(f, a1, a2){
   return a1.map(f).ap(a2);
 });
